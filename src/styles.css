@@ -4,27 +4,30 @@
 }
 
 .input {
-  width: 100%;
+  width: 40%;
   box-sizing: border-box;
   border: 0;
-  border-radius: 4px;
+  border-radius: 1px;
   box-shadow: none;
   padding: 1rem;
-  height: 2.25em;
-  font-size: 24px;
+  height: 30px;
+  font-size: 15px;
 }
 .task {
-  color: yellow;
-  background: black;
+  color: black;
+  background: lightgoldenrodyellow;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
   padding: 3px 10px;
   font-size: 24px;
   margin-bottom: 6px;
-  border-radius: 3px;
+  border-radius: 2px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 #tasktrack {
-  background-color: yellow;
+  background-color: gray;
+}
+.form p {
+  display: inline-block;
 }
