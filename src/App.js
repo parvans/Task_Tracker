@@ -43,7 +43,10 @@ export default function App() {
       <div id="tasktrack">
         {tasks.map((item, i) => (
           <div className="task" key={i} id={i}>
-            {item.text} <span onClick={removeItem}>(-)</span>
+            {item.text}{" "}
+            <span className="removeicon" onClick={removeItem}>
+              (-)
+            </span>
           </div>
         ))}
         <form className="form" onSubmit={addItem}>
