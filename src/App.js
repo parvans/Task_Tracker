@@ -14,7 +14,7 @@ export default function App() {
   }
   //console.log(formatAMPM(new Date));
   const [tasks, setTasks] = useState([
-    { text: `Get Groceries - ${formatAMPM(new Date())} (-)` }
+    { text: `Get Groceries - ${formatAMPM(new Date())}` }
   ]);
   const [value, setValues] = useState("");
   function addItem(e) {
@@ -22,7 +22,7 @@ export default function App() {
     if (!value) return;
     const newTask = [
       ...tasks,
-      { text: `${value} - ${formatAMPM(new Date())} (-)` }
+      { text: `${value} - ${formatAMPM(new Date())}` }
     ];
     setTasks(newTask);
     setValues("");
@@ -42,8 +42,8 @@ export default function App() {
       </h3>
       <div id="tasktrack">
         {tasks.map((item, i) => (
-          <div className="task" key={i} id={i} onClick={removeItem}>
-            {item.text}
+          <div className="task" key={i} id={i}>
+            {item.text} <span onClick={removeItem}>(-)</span>
           </div>
         ))}
         <form className="form" onSubmit={addItem}>
